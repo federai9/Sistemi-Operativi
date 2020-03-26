@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void printarrayreverse(char * data, int data_len) {
+
+	for(int i = data_len-1; i >= 0; i--) {
+		    printf("%c", data[i]);
+		   }
+}
+
+
+int main(int argc, char *argv[]) {
+
+	int i=0, c, arraysize=1;
+
+	char * val = calloc(arraysize, sizeof(char));
+	if (val == NULL) {
+		perror("calloc error!");
+		exit(EXIT_FAILURE);
+	}
+
+	while((c=getchar())!= EOF)
+	{
+		val[i]=c;
+		arraysize++;
+		val = realloc(val,(arraysize)*sizeof(char));
+		i++;
+
+	}
+
+	printarrayreverse(val, arraysize);
+	free(val);
+
+
+	return 0;
+}
