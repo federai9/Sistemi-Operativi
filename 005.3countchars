@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+
+int main(int argc, char *argv[]) {
+
+
+	int c;
+	int numTab=0, numLine=0, numSpace=0;
+
+	while((c=getchar()) != EOF)
+	{
+
+		if(c=='\t')
+			numTab++;
+		if(c=='\n')
+			numLine++;
+		if(c==' ')
+			numSpace++;
+
+	}
+
+	printf("Number of '/t': %d\n", numTab);
+	printf("Number of '/n': %d\n", numLine);
+	printf("Number of ' ' (spaces): %d\n", numSpace);
+
+	return 0;
+}
