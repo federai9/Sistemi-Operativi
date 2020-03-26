@@ -1,4 +1,4 @@
 # Sistemi-Operativi
 Homeworks
 
-Exercise in C - 2020
+Exercises in C - 2020
